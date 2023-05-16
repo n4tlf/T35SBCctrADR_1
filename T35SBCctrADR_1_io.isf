@@ -1,6 +1,6 @@
 # Efinity Interface Configuration
 # Version: 2022.1.226
-# Date: 2023-05-16 01:09
+# Date: 2023-05-16 16:36
 #
 # Copyright (C) 2017 - 2022 Efinix Inc. All rights reserved.
 #
@@ -43,6 +43,7 @@ design.create_output_gpio("F_out_DO_oe")
 design.create_output_gpio("boardActive")
 design.create_pll_input_clock_gpio("clockIn")
 design.create_output_gpio("s100_CDSB")
+design.create_output_gpio("s100_PHANTOM")
 design.create_output_gpio("s100_SDSB")
 design.create_input_gpio("s100_n_RESET")
 design.create_output_gpio("s100_n_pWR")
@@ -135,6 +136,7 @@ design.assign_pkg_pin("F_out_DO_oe","D13")
 design.assign_pkg_pin("boardActive","E3")
 design.assign_pkg_pin("clockIn","T8")
 design.assign_pkg_pin("s100_CDSB","U10")
+design.assign_pkg_pin("s100_PHANTOM","J1")
 design.assign_pkg_pin("s100_SDSB","V11")
 design.assign_pkg_pin("s100_n_RESET","D9")
 design.assign_pkg_pin("s100_n_pWR","E4")

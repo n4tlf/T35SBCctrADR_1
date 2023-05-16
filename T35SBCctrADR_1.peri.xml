@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<efxpt:design_db name="T35SBCctrADR_1" device_def="T35F400" location="C:\s100n4tlf\T35SBCctrADR_1" version="2022.1.226" db_version="20221999" last_change_date="Tue May 16 01:08:54 2023" xmlns:efxpt="http://www.efinixinc.com/peri_design_db" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efinixinc.com/peri_design_db peri_design_db.xsd ">
+<efxpt:design_db name="T35SBCctrADR_1" device_def="T35F400" location="C:\s100n4tlf\T35SBCctrADR_1" version="2022.1.226" db_version="20221999" last_change_date="Tue May 16 16:52:07 2023" xmlns:efxpt="http://www.efinixinc.com/peri_design_db" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efinixinc.com/peri_design_db peri_design_db.xsd ">
     <efxpt:device_info>
         <efxpt:iobank_info>
             <efxpt:iobank name="1A" iostd="3.3 V LVTTL / LVCMOS"/>
@@ -134,6 +134,9 @@
         </efxpt:gpio>
         <efxpt:gpio name="s100_DO[7]" gpio_def="GPIOL_112" mode="output" bus_name="s100_DO" is_lvds_gpio="false" io_standard="3.3 V LVTTL / LVCMOS">
             <efxpt:output_config name="s100_DO[7]" name_ddio_lo="" register_option="none" clock_name="" is_clock_inverted="false" is_slew_rate="false" tied_option="none" ddio_type="none" drive_strength="3"/>
+        </efxpt:gpio>
+        <efxpt:gpio name="s100_PHANTOM" gpio_def="GPIOR_134" mode="output" bus_name="" is_lvds_gpio="false" io_standard="3.3 V LVTTL / LVCMOS">
+            <efxpt:output_config name="s100_PHANTOM" name_ddio_lo="" register_option="none" clock_name="" is_clock_inverted="false" is_slew_rate="false" tied_option="none" ddio_type="none" drive_strength="1"/>
         </efxpt:gpio>
         <efxpt:gpio name="s100_SDSB" gpio_def="GPIOB_TXN11" mode="output" bus_name="" is_lvds_gpio="true" io_standard="3.3 V LVTTL / LVCMOS">
             <efxpt:output_config name="s100_SDSB" name_ddio_lo="" register_option="none" clock_name="" is_clock_inverted="false" is_slew_rate="false" tied_option="none" ddio_type="none" drive_strength="1"/>

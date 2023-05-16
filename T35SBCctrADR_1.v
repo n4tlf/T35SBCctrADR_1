@@ -47,7 +47,8 @@ module  T35SBCctrADR_1_top (
     s100_SDSB,          // FPGA SDSB Status and Address DISABLE (S100-19)
     s100_sINTA,
     s100_sOUT,
-    s100_sINP);
+    s100_sINP,
+    s100_PHANTOM);
 
     input   pll0_LOCKED;        // PLL is locked (good)
     input   pll0_2MHz;          // 2MHz PLL Clock signal
@@ -75,8 +76,9 @@ module  T35SBCctrADR_1_top (
     output  s100_CDSB;              // Control Disable to S100 bus
     output  s100_SDSB;              // STATUS Disable to S100 bus
     output  s100_sINTA;             // S100 INTA OUTPUT
-    output  s100_sOUT;
-    output  s100_sINP;
+    output  s100_sOUT;              // S100 sOUT to flash about one second
+    output  s100_sINP;              // S100 sIN flash opposite sOUT
+    output  s100_PHANTOM;           // turn OFF Phantom LED
     
 wire       n_reset;
 reg [26:0]  counter;            // 27-bit counter for A0 to A15
@@ -119,6 +121,7 @@ assign s100_sMWRT = 1'b0;               // keep memory write low
 assign s100_sINTA = 1'b0;               // keep processot INTA low
 assign s100_sOUT = counter[20];         // Flash the S100 sOUT LED
 assign s100_sINP = !counter[20];        // Flash sINP LED opposite sOUT
+assign s100_PHANTOM = 1'b0;             // turn OFF PHANTOM LED for now
 
 /****************************************************************************
 *       THE COUNTER ITSELF                                                  *
