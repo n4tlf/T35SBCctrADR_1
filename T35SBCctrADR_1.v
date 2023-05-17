@@ -112,7 +112,7 @@ assign sbcLEDS = ~(counter[26:19]);     // LEDs active low, complement
 *    FAKE VARIOUS S100 SIGNALS FOR BUS DISPLAY                              *
 ****************************************************************************/
 assign n_reset = s100_n_RESET;          // Board and S100 reset in
-assign boardActive = pll0_LOCKED;       // Show that the PLL is locked
+assign boardActive = !pll0_LOCKED;      // Show that the PLL is locked
 assign s100_pDBIN = pll0_2MHz;          // Fake an S100 pDBIN signal
 assign s100_pSYNC = pll0_2MHz;          // Fake an S100 pSYNC signal
 assign s100_pSTVAL = !pll0_2MHz;        // Fake an S100 pSTVAL signal
